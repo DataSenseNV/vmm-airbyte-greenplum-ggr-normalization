@@ -1,0 +1,59 @@
+name: airbyte_utils
+version: '1.0'
+config-version: 2
+profile: normalize
+model-paths:
+- models
+docs-paths:
+- docs
+analysis-paths:
+- analysis
+test-paths:
+- tests
+seed-paths:
+- data
+macro-paths:
+- macros
+target-path: ../build
+log-path: ../logs
+packages-install-path: /dbt
+clean-targets:
+- build
+- dbt_modules
+quoting:
+  database: true
+  schema: false
+  identifier: true
+models:
+  airbyte_utils:
+    +materialized: table
+    generated:
+      airbyte_ctes:
+        +tags: airbyte_internal_cte
+        +materialized: ephemeral
+      airbyte_incremental:
+        +tags: incremental_tables
+        +materialized: incremental
+        +on_schema_change: sync_all_columns
+      airbyte_tables:
+        +tags: normalized_tables
+        +materialized: table
+      airbyte_views:
+        +tags: airbyte_internal_views
+        +materialized: view
+dispatch:
+- macro_namespace: dbt_utils
+  search_order:
+  - airbyte_utils
+  - dbt_utils
+vars:
+  json_column: _airbyte_data
+  models_to_source:
+    ggr_ab1: dbtfix._airbyte_raw_ggr
+    ggr_ab2: dbtfix._airbyte_raw_ggr
+    ggr_ab3: dbtfix._airbyte_raw_ggr
+    ggr: dbtfix._airbyte_raw_ggr
+    referentie_huisaansluiting_ab1: dbtfix._airbyte_raw_referentie_huisaansluiting
+    referentie_huisaansluiting_ab2: dbtfix._airbyte_raw_referentie_huisaansluiting
+    referentie_huisaansluiting_ab3: dbtfix._airbyte_raw_referentie_huisaansluiting
+    referentie_huisaansluiting: dbtfix._airbyte_raw_referentie_huisaansluiting
