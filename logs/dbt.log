@@ -14,3 +14,438 @@
 13:48:08.650724 [debug] [MainThread]: SQL status: SELECT 1 in 0.09 seconds
 13:48:08.652529 [debug] [MainThread]: On debug: Close
 13:48:08.653790 [debug] [MainThread]: Connection 'debug' was properly closed.
+
+
+============================== 2022-05-20 07:45:52.191824 | f2809f27-6bc4-4446-94b3-43af1c44c41b ==============================
+07:45:52.191838 [info ] [MainThread]: Running with dbt=1.2.0-a1
+07:45:52.199760 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/home/jim/.dbt', 'send_anonymous_usage_stats': False, 'event_buffer_size': 100000, 'quiet': False, 'no_print': False, 'which': 'clean', 'indirect_selection': 'eager'}
+07:45:52.200058 [debug] [MainThread]: Tracking: do not track
+07:45:52.202284 [warn ] [MainThread]: [[33mWARNING[0m]: Deprecated functionality
+The default package install path has changed from `dbt_modules` to
+`dbt_packages`. Please update `clean-targets` in `dbt_project.yml` and check
+`.gitignore` as well. Or, set `packages-install-path: dbt_modules` if you'd like
+to keep the current value.
+
+
+============================== 2022-05-20 07:46:23.363727 | 85b6cd3a-535f-4f6e-9d8c-a7651af2b189 ==============================
+07:46:23.363740 [info ] [MainThread]: Running with dbt=1.2.0-a1
+07:46:23.364024 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/home/jim/.dbt', 'send_anonymous_usage_stats': False, 'event_buffer_size': 100000, 'quiet': False, 'no_print': False, 'which': 'deps', 'rpc_method': 'deps', 'indirect_selection': 'eager'}
+07:46:23.364118 [debug] [MainThread]: Tracking: do not track
+07:46:23.366524 [debug] [MainThread]: Set downloads directory='/tmp/dbt-downloads-r5kpwzya'
+07:46:23.367318 [debug] [MainThread]: Executing "git clone --depth 1 https://github.com/fishtown-analytics/dbt-utils.git 859fd0fa21176efee375a447937f7a46"
+07:46:23.922953 [debug] [MainThread]: STDOUT: "b''"
+07:46:23.923276 [debug] [MainThread]: STDERR: "b"Cloning into '859fd0fa21176efee375a447937f7a46'...\n""
+07:46:23.923664 [debug] [MainThread]: Pulling new dependency 859fd0fa21176efee375a447937f7a46.
+07:46:23.923862 [debug] [MainThread]: Executing "git rev-parse HEAD"
+07:46:23.925813 [debug] [MainThread]: STDOUT: "b'44eeb1978c1c720baca2e2cfe07671e94db02c7c\n'"
+07:46:23.926058 [debug] [MainThread]: STDERR: "b''"
+07:46:23.926170 [debug] [MainThread]:   Checking out revision 0.8.2.
+07:46:23.926263 [debug] [MainThread]: Executing "git remote set-branches origin 0.8.2"
+07:46:23.931682 [debug] [MainThread]: STDOUT: "b''"
+07:46:23.932069 [debug] [MainThread]: STDERR: "b''"
+07:46:23.932315 [debug] [MainThread]: Executing "git fetch origin --depth 1 --tags 0.8.2"
+07:46:25.670303 [debug] [MainThread]: STDOUT: "b''"
+07:46:25.670547 [debug] [MainThread]: STDERR: "b'From https://github.com/fishtown-analytics/dbt-utils\n * tag               0.8.2      -> FETCH_HEAD\n * [new tag]         0.0.1      -> 0.0.1\n * [new tag]         0.1.0      -> 0.1.0\n * [new tag]         0.1.1      -> 0.1.1\n * [new tag]         0.1.10     -> 0.1.10\n * [new tag]         0.1.11     -> 0.1.11\n * [new tag]         0.1.12     -> 0.1.12\n * [new tag]         0.1.13     -> 0.1.13\n * [new tag]         0.1.14     -> 0.1.14\n * [new tag]         0.1.15     -> 0.1.15\n * [new tag]         0.1.16     -> 0.1.16\n * [new tag]         0.1.17     -> 0.1.17\n * [new tag]         0.1.18     -> 0.1.18\n * [new tag]         0.1.19     -> 0.1.19\n * [new tag]         0.1.2      -> 0.1.2\n * [new tag]         0.1.20     -> 0.1.20\n * [new tag]         0.1.21     -> 0.1.21\n * [new tag]         0.1.22     -> 0.1.22\n * [new tag]         0.1.23     -> 0.1.23\n * [new tag]         0.1.24     -> 0.1.24\n * [new tag]         0.1.25     -> 0.1.25\n * [new tag]         0.1.3      -> 0.1.3\n * [new tag]         0.1.4      -> 0.1.4\n * [new tag]         0.1.5      -> 0.1.5\n * [new tag]         0.1.6      -> 0.1.6\n * [new tag]         0.1.7      -> 0.1.7\n * [new tag]         0.1.8      -> 0.1.8\n * [new tag]         0.1.9      -> 0.1.9\n * [new tag]         0.2.0      -> 0.2.0\n * [new tag]         0.2.1      -> 0.2.1\n * [new tag]         0.2.2      -> 0.2.2\n * [new tag]         0.2.3      -> 0.2.3\n * [new tag]         0.2.4      -> 0.2.4\n * [new tag]         0.2.5      -> 0.2.5\n * [new tag]         0.3.0      -> 0.3.0\n * [new tag]         0.4.0      -> 0.4.0\n * [new tag]         0.4.1      -> 0.4.1\n * [new tag]         0.5.0      -> 0.5.0\n * [new tag]         0.5.1      -> 0.5.1\n * [new tag]         0.6.0      -> 0.6.0\n * [new tag]         0.6.1      -> 0.6.1\n * [new tag]         0.6.2      -> 0.6.2\n * [new tag]         0.6.3      -> 0.6.3\n * [new tag]         0.6.4      -> 0.6.4\n * [new tag]         0.6.5      -> 0.6.5\n * [new tag]         0.6.6      -> 0.6.6\n * [new tag]         0.7.0      -> 0.7.0\n * [new tag]         0.7.1      -> 0.7.1\n * [new tag]         0.7.2      -> 0.7.2\n * [new tag]         0.7.3      -> 0.7.3\n * [new tag]         0.7.4      -> 0.7.4\n * [new tag]         0.7.4-b1   -> 0.7.4-b1\n * [new tag]         0.7.4b1    -> 0.7.4b1\n * [new tag]         0.7.5      -> 0.7.5\n * [new tag]         0.7.6      -> 0.7.6\n * [new tag]         0.8.0      -> 0.8.0\n * [new tag]         0.8.1      -> 0.8.1\n * [new tag]         0.8.2      -> 0.8.2\n * [new tag]         0.8.3      -> 0.8.3\n * [new tag]         0.8.4      -> 0.8.4\n'"
+07:46:25.670677 [debug] [MainThread]: Executing "git tag --list"
+07:46:25.673424 [debug] [MainThread]: STDOUT: "b'0.0.1\n0.1.0\n0.1.1\n0.1.10\n0.1.11\n0.1.12\n0.1.13\n0.1.14\n0.1.15\n0.1.16\n0.1.17\n0.1.18\n0.1.19\n0.1.2\n0.1.20\n0.1.21\n0.1.22\n0.1.23\n0.1.24\n0.1.25\n0.1.3\n0.1.4\n0.1.5\n0.1.6\n0.1.7\n0.1.8\n0.1.9\n0.2.0\n0.2.1\n0.2.2\n0.2.3\n0.2.4\n0.2.5\n0.3.0\n0.4.0\n0.4.1\n0.5.0\n0.5.1\n0.6.0\n0.6.1\n0.6.2\n0.6.3\n0.6.4\n0.6.5\n0.6.6\n0.7.0\n0.7.1\n0.7.2\n0.7.3\n0.7.4\n0.7.4-b1\n0.7.4b1\n0.7.5\n0.7.6\n0.8.0\n0.8.1\n0.8.2\n0.8.3\n0.8.4\n0.8.5\n'"
+07:46:25.673857 [debug] [MainThread]: STDERR: "b''"
+07:46:25.674145 [debug] [MainThread]: Executing "git reset --hard tags/0.8.2"
+07:46:25.680064 [debug] [MainThread]: STDOUT: "b'HEAD is now at 5717b10 Fix union_relations error when no include/exclude provided\n'"
+07:46:25.680376 [debug] [MainThread]: STDERR: "b''"
+07:46:25.680591 [debug] [MainThread]: Executing "git rev-parse HEAD"
+07:46:25.682736 [debug] [MainThread]: STDOUT: "b'5717b109d358844e0f085565b93e74cbe469ecb0\n'"
+07:46:25.683081 [debug] [MainThread]: STDERR: "b''"
+07:46:25.683337 [debug] [MainThread]:   Checked out at 5717b10.
+07:46:25.693249 [debug] [MainThread]: Executing "git clone --depth 1 https://github.com/fishtown-analytics/dbt-utils.git 859fd0fa21176efee375a447937f7a46"
+07:46:25.696125 [debug] [MainThread]: STDOUT: "b''"
+07:46:25.696425 [debug] [MainThread]: STDERR: "b"fatal: destination path '859fd0fa21176efee375a447937f7a46' already exists and is not an empty directory.\n""
+07:46:25.696629 [debug] [MainThread]: command return code=128
+07:46:25.697330 [debug] [MainThread]: Updating existing dependency 859fd0fa21176efee375a447937f7a46.
+07:46:25.697422 [debug] [MainThread]: Executing "git rev-parse HEAD"
+07:46:25.699552 [debug] [MainThread]: STDOUT: "b'5717b109d358844e0f085565b93e74cbe469ecb0\n'"
+07:46:25.699912 [debug] [MainThread]: STDERR: "b''"
+07:46:25.700176 [debug] [MainThread]:   Checking out revision 0.8.2.
+07:46:25.700417 [debug] [MainThread]: Executing "git remote set-branches origin 0.8.2"
+07:46:25.703618 [debug] [MainThread]: STDOUT: "b''"
+07:46:25.703932 [debug] [MainThread]: STDERR: "b''"
+07:46:25.704173 [debug] [MainThread]: Executing "git fetch origin --depth 1 --tags 0.8.2"
+07:46:26.199934 [debug] [MainThread]: STDOUT: "b''"
+07:46:26.200346 [debug] [MainThread]: STDERR: "b'From https://github.com/fishtown-analytics/dbt-utils\n * tag               0.8.2      -> FETCH_HEAD\n'"
+07:46:26.200634 [debug] [MainThread]: Executing "git tag --list"
+07:46:26.202305 [debug] [MainThread]: STDOUT: "b'0.0.1\n0.1.0\n0.1.1\n0.1.10\n0.1.11\n0.1.12\n0.1.13\n0.1.14\n0.1.15\n0.1.16\n0.1.17\n0.1.18\n0.1.19\n0.1.2\n0.1.20\n0.1.21\n0.1.22\n0.1.23\n0.1.24\n0.1.25\n0.1.3\n0.1.4\n0.1.5\n0.1.6\n0.1.7\n0.1.8\n0.1.9\n0.2.0\n0.2.1\n0.2.2\n0.2.3\n0.2.4\n0.2.5\n0.3.0\n0.4.0\n0.4.1\n0.5.0\n0.5.1\n0.6.0\n0.6.1\n0.6.2\n0.6.3\n0.6.4\n0.6.5\n0.6.6\n0.7.0\n0.7.1\n0.7.2\n0.7.3\n0.7.4\n0.7.4-b1\n0.7.4b1\n0.7.5\n0.7.6\n0.8.0\n0.8.1\n0.8.2\n0.8.3\n0.8.4\n0.8.5\n'"
+07:46:26.202538 [debug] [MainThread]: STDERR: "b''"
+07:46:26.202646 [debug] [MainThread]: Executing "git reset --hard tags/0.8.2"
+07:46:26.208516 [debug] [MainThread]: STDOUT: "b'HEAD is now at 5717b10 Fix union_relations error when no include/exclude provided\n'"
+07:46:26.208903 [debug] [MainThread]: STDERR: "b''"
+07:46:26.209160 [debug] [MainThread]: Executing "git rev-parse HEAD"
+07:46:26.211732 [debug] [MainThread]: STDOUT: "b'5717b109d358844e0f085565b93e74cbe469ecb0\n'"
+07:46:26.212095 [debug] [MainThread]: STDERR: "b''"
+07:46:26.212358 [debug] [MainThread]: Already at 5717b10, nothing to do.
+07:46:26.222364 [info ] [MainThread]: Installing https://github.com/fishtown-analytics/dbt-utils.git
+07:46:26.223051 [debug] [MainThread]: Executing "git clone --depth 1 https://github.com/fishtown-analytics/dbt-utils.git 859fd0fa21176efee375a447937f7a46"
+07:46:26.225167 [debug] [MainThread]: STDOUT: "b''"
+07:46:26.225553 [debug] [MainThread]: STDERR: "b"fatal: destination path '859fd0fa21176efee375a447937f7a46' already exists and is not an empty directory.\n""
+07:46:26.225803 [debug] [MainThread]: command return code=128
+07:46:26.226352 [debug] [MainThread]: Updating existing dependency 859fd0fa21176efee375a447937f7a46.
+07:46:26.226438 [debug] [MainThread]: Executing "git rev-parse HEAD"
+07:46:26.228544 [debug] [MainThread]: STDOUT: "b'5717b109d358844e0f085565b93e74cbe469ecb0\n'"
+07:46:26.228909 [debug] [MainThread]: STDERR: "b''"
+07:46:26.229163 [debug] [MainThread]:   Checking out revision 0.8.2.
+07:46:26.229408 [debug] [MainThread]: Executing "git remote set-branches origin 0.8.2"
+07:46:26.234788 [debug] [MainThread]: STDOUT: "b''"
+07:46:26.235106 [debug] [MainThread]: STDERR: "b''"
+07:46:26.235351 [debug] [MainThread]: Executing "git fetch origin --depth 1 --tags 0.8.2"
+07:46:26.756951 [debug] [MainThread]: STDOUT: "b''"
+07:46:26.757369 [debug] [MainThread]: STDERR: "b'From https://github.com/fishtown-analytics/dbt-utils\n * tag               0.8.2      -> FETCH_HEAD\n'"
+07:46:26.757654 [debug] [MainThread]: Executing "git tag --list"
+07:46:26.759389 [debug] [MainThread]: STDOUT: "b'0.0.1\n0.1.0\n0.1.1\n0.1.10\n0.1.11\n0.1.12\n0.1.13\n0.1.14\n0.1.15\n0.1.16\n0.1.17\n0.1.18\n0.1.19\n0.1.2\n0.1.20\n0.1.21\n0.1.22\n0.1.23\n0.1.24\n0.1.25\n0.1.3\n0.1.4\n0.1.5\n0.1.6\n0.1.7\n0.1.8\n0.1.9\n0.2.0\n0.2.1\n0.2.2\n0.2.3\n0.2.4\n0.2.5\n0.3.0\n0.4.0\n0.4.1\n0.5.0\n0.5.1\n0.6.0\n0.6.1\n0.6.2\n0.6.3\n0.6.4\n0.6.5\n0.6.6\n0.7.0\n0.7.1\n0.7.2\n0.7.3\n0.7.4\n0.7.4-b1\n0.7.4b1\n0.7.5\n0.7.6\n0.8.0\n0.8.1\n0.8.2\n0.8.3\n0.8.4\n0.8.5\n'"
+07:46:26.759711 [debug] [MainThread]: STDERR: "b''"
+07:46:26.759908 [debug] [MainThread]: Executing "git reset --hard tags/0.8.2"
+07:46:26.764633 [debug] [MainThread]: STDOUT: "b'HEAD is now at 5717b10 Fix union_relations error when no include/exclude provided\n'"
+07:46:26.765035 [debug] [MainThread]: STDERR: "b''"
+07:46:26.765293 [debug] [MainThread]: Executing "git rev-parse HEAD"
+07:46:26.766863 [debug] [MainThread]: STDOUT: "b'5717b109d358844e0f085565b93e74cbe469ecb0\n'"
+07:46:26.767225 [debug] [MainThread]: STDERR: "b''"
+07:46:26.767519 [debug] [MainThread]: Already at 5717b10, nothing to do.
+07:46:26.826768 [info ] [MainThread]:   Installed from revision 0.8.2
+
+
+============================== 2022-05-20 07:46:48.384012 | 17dfb949-dbdc-4920-95d5-8183b35cccf7 ==============================
+07:46:48.384024 [info ] [MainThread]: Running with dbt=1.2.0-a1
+07:46:48.384304 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/home/jim/.dbt', 'send_anonymous_usage_stats': False, 'event_buffer_size': 100000, 'quiet': False, 'no_print': False, 'parse_only': False, 'which': 'compile', 'rpc_method': 'compile', 'indirect_selection': 'eager'}
+07:46:48.384403 [debug] [MainThread]: Tracking: do not track
+07:46:48.397637 [info ] [MainThread]: Partial parse save file not found. Starting full parse.
+07:46:48.413975 [debug] [MainThread]: Parsing macros/configuration.sql
+07:46:48.416464 [debug] [MainThread]: Parsing macros/get_custom_schema.sql
+07:46:48.416994 [debug] [MainThread]: Parsing macros/incremental.sql
+07:46:48.421017 [debug] [MainThread]: Parsing macros/should_full_refresh.sql
+07:46:48.424533 [debug] [MainThread]: Parsing macros/star_intersect.sql
+07:46:48.428515 [debug] [MainThread]: Parsing macros/cross_db_utils/array.sql
+07:46:48.437890 [debug] [MainThread]: Parsing macros/cross_db_utils/columns.sql
+07:46:48.439772 [debug] [MainThread]: Parsing macros/cross_db_utils/concat.sql
+07:46:48.441189 [debug] [MainThread]: Parsing macros/cross_db_utils/current_timestamp.sql
+07:46:48.441611 [debug] [MainThread]: Parsing macros/cross_db_utils/datatypes.sql
+07:46:48.448469 [debug] [MainThread]: Parsing macros/cross_db_utils/except.sql
+07:46:48.449055 [debug] [MainThread]: Parsing macros/cross_db_utils/hash.sql
+07:46:48.449465 [debug] [MainThread]: Parsing macros/cross_db_utils/json_operations.sql
+07:46:48.472159 [debug] [MainThread]: Parsing macros/cross_db_utils/quote.sql
+07:46:48.473382 [debug] [MainThread]: Parsing macros/cross_db_utils/surrogate_key.sql
+07:46:48.474708 [debug] [MainThread]: Parsing macros/cross_db_utils/type_conversions.sql
+07:46:48.480106 [debug] [MainThread]: Parsing macros/schema_tests/equal_rowcount.sql
+07:46:48.480893 [debug] [MainThread]: Parsing macros/schema_tests/equality.sql
+07:46:48.485232 [debug] [MainThread]: Parsing macros/adapters.sql
+07:46:48.500444 [debug] [MainThread]: Parsing macros/catalog.sql
+07:46:48.502015 [debug] [MainThread]: Parsing macros/relations.sql
+07:46:48.502894 [debug] [MainThread]: Parsing macros/materializations/snapshot_merge.sql
+07:46:48.504021 [debug] [MainThread]: Parsing macros/adapters/columns.sql
+07:46:48.510612 [debug] [MainThread]: Parsing macros/adapters/freshness.sql
+07:46:48.542409 [debug] [MainThread]: Parsing macros/adapters/indexes.sql
+07:46:48.544444 [debug] [MainThread]: Parsing macros/adapters/metadata.sql
+07:46:48.549211 [debug] [MainThread]: Parsing macros/adapters/persist_docs.sql
+07:46:48.552275 [debug] [MainThread]: Parsing macros/adapters/relation.sql
+07:46:48.558651 [debug] [MainThread]: Parsing macros/adapters/schema.sql
+07:46:48.560171 [debug] [MainThread]: Parsing macros/etc/datetime.sql
+07:46:48.565923 [debug] [MainThread]: Parsing macros/etc/statement.sql
+07:46:48.569100 [debug] [MainThread]: Parsing macros/generic_test_sql/accepted_values.sql
+07:46:48.570088 [debug] [MainThread]: Parsing macros/generic_test_sql/not_null.sql
+07:46:48.570668 [debug] [MainThread]: Parsing macros/generic_test_sql/relationships.sql
+07:46:48.571252 [debug] [MainThread]: Parsing macros/generic_test_sql/unique.sql
+07:46:48.571718 [debug] [MainThread]: Parsing macros/get_custom_name/get_custom_alias.sql
+07:46:48.572728 [debug] [MainThread]: Parsing macros/get_custom_name/get_custom_database.sql
+07:46:48.573804 [debug] [MainThread]: Parsing macros/get_custom_name/get_custom_schema.sql
+07:46:48.575485 [debug] [MainThread]: Parsing macros/materializations/configs.sql
+07:46:48.577162 [debug] [MainThread]: Parsing macros/materializations/hooks.sql
+07:46:48.579784 [debug] [MainThread]: Parsing macros/materializations/seeds/helpers.sql
+07:46:48.591963 [debug] [MainThread]: Parsing macros/materializations/seeds/seed.sql
+07:46:48.596236 [debug] [MainThread]: Parsing macros/materializations/snapshots/helpers.sql
+07:46:48.604933 [debug] [MainThread]: Parsing macros/materializations/snapshots/snapshot.sql
+07:46:48.612306 [debug] [MainThread]: Parsing macros/materializations/snapshots/snapshot_merge.sql
+07:46:48.613430 [debug] [MainThread]: Parsing macros/materializations/snapshots/strategies.sql
+07:46:48.624981 [debug] [MainThread]: Parsing macros/materializations/tests/helpers.sql
+07:46:48.626255 [debug] [MainThread]: Parsing macros/materializations/tests/test.sql
+07:46:48.629415 [debug] [MainThread]: Parsing macros/materializations/tests/where_subquery.sql
+07:46:48.630680 [debug] [MainThread]: Parsing macros/materializations/models/incremental/column_helpers.sql
+07:46:48.633737 [debug] [MainThread]: Parsing macros/materializations/models/incremental/incremental.sql
+07:46:48.640752 [debug] [MainThread]: Parsing macros/materializations/models/incremental/is_incremental.sql
+07:46:48.641820 [debug] [MainThread]: Parsing macros/materializations/models/incremental/merge.sql
+07:46:48.652674 [debug] [MainThread]: Parsing macros/materializations/models/incremental/on_schema_change.sql
+07:46:48.662953 [debug] [MainThread]: Parsing macros/materializations/models/table/create_table_as.sql
+07:46:48.664985 [debug] [MainThread]: Parsing macros/materializations/models/table/table.sql
+07:46:48.670270 [debug] [MainThread]: Parsing macros/materializations/models/view/create_or_replace_view.sql
+07:46:48.672156 [debug] [MainThread]: Parsing macros/materializations/models/view/create_view_as.sql
+07:46:48.673740 [debug] [MainThread]: Parsing macros/materializations/models/view/helpers.sql
+07:46:48.674625 [debug] [MainThread]: Parsing macros/materializations/models/view/view.sql
+07:46:48.679596 [debug] [MainThread]: Parsing tests/generic/builtin.sql
+07:46:48.681712 [debug] [MainThread]: Parsing macros/schema_tests/unique_combination_of_columns.sql
+07:46:48.683661 [debug] [MainThread]: Parsing macros/schema_tests/test_unique_where.sql
+07:46:48.684642 [debug] [MainThread]: Parsing macros/schema_tests/test_not_null_where.sql
+07:46:48.685626 [debug] [MainThread]: Parsing macros/schema_tests/sequential_values.sql
+07:46:48.687778 [debug] [MainThread]: Parsing macros/schema_tests/relationships_where.sql
+07:46:48.689338 [debug] [MainThread]: Parsing macros/schema_tests/recency.sql
+07:46:48.690561 [debug] [MainThread]: Parsing macros/schema_tests/not_null_proportion.sql
+07:46:48.692167 [debug] [MainThread]: Parsing macros/schema_tests/not_constant.sql
+07:46:48.693045 [debug] [MainThread]: Parsing macros/schema_tests/not_accepted_values.sql
+07:46:48.694540 [debug] [MainThread]: Parsing macros/schema_tests/mutually_exclusive_ranges.sql
+07:46:48.700388 [debug] [MainThread]: Parsing macros/schema_tests/fewer_rows_than.sql
+07:46:48.701554 [debug] [MainThread]: Parsing macros/schema_tests/expression_is_true.sql
+07:46:48.702801 [debug] [MainThread]: Parsing macros/schema_tests/equality.sql
+07:46:48.705318 [debug] [MainThread]: Parsing macros/schema_tests/equal_rowcount.sql
+07:46:48.706445 [debug] [MainThread]: Parsing macros/schema_tests/cardinality_equality.sql
+07:46:48.707812 [debug] [MainThread]: Parsing macros/schema_tests/at_least_one.sql
+07:46:48.708676 [debug] [MainThread]: Parsing macros/schema_tests/accepted_range.sql
+07:46:48.710437 [debug] [MainThread]: Parsing macros/web/get_url_path.sql
+07:46:48.712215 [debug] [MainThread]: Parsing macros/web/get_url_parameter.sql
+07:46:48.713300 [debug] [MainThread]: Parsing macros/web/get_url_host.sql
+07:46:48.714633 [debug] [MainThread]: Parsing macros/sql/union.sql
+07:46:48.722104 [debug] [MainThread]: Parsing macros/sql/star.sql
+07:46:48.725132 [debug] [MainThread]: Parsing macros/sql/get_tables_by_pattern_sql.sql
+07:46:48.729415 [debug] [MainThread]: Parsing macros/sql/get_table_types_sql.sql
+07:46:48.730307 [debug] [MainThread]: Parsing macros/sql/get_column_values.sql
+07:46:48.733959 [debug] [MainThread]: Parsing macros/sql/unpivot.sql
+07:46:48.739350 [debug] [MainThread]: Parsing macros/sql/surrogate_key.sql
+07:46:48.741795 [debug] [MainThread]: Parsing macros/sql/safe_add.sql
+07:46:48.742925 [debug] [MainThread]: Parsing macros/sql/pivot.sql
+07:46:48.745883 [debug] [MainThread]: Parsing macros/sql/nullcheck_table.sql
+07:46:48.747079 [debug] [MainThread]: Parsing macros/sql/nullcheck.sql
+07:46:48.748227 [debug] [MainThread]: Parsing macros/sql/haversine_distance.sql
+07:46:48.752258 [debug] [MainThread]: Parsing macros/sql/groupby.sql
+07:46:48.753203 [debug] [MainThread]: Parsing macros/sql/get_tables_by_prefix_sql.sql
+07:46:48.754350 [debug] [MainThread]: Parsing macros/sql/get_relations_by_prefix.sql
+07:46:48.756691 [debug] [MainThread]: Parsing macros/sql/get_relations_by_pattern.sql
+07:46:48.759048 [debug] [MainThread]: Parsing macros/sql/get_query_results_as_dict.sql
+07:46:48.760656 [debug] [MainThread]: Parsing macros/sql/generate_series.sql
+07:46:48.763593 [debug] [MainThread]: Parsing macros/sql/date_spine.sql
+07:46:48.766596 [debug] [MainThread]: Parsing macros/materializations/insert_by_period_materialization.sql
+07:46:48.783561 [debug] [MainThread]: Parsing macros/jinja_helpers/slugify.sql
+07:46:48.784561 [debug] [MainThread]: Parsing macros/jinja_helpers/pretty_time.sql
+07:46:48.785417 [debug] [MainThread]: Parsing macros/jinja_helpers/pretty_log_format.sql
+07:46:48.786194 [debug] [MainThread]: Parsing macros/jinja_helpers/log_info.sql
+07:46:48.786974 [debug] [MainThread]: Parsing macros/cross_db_utils/split_part.sql
+07:46:48.788241 [debug] [MainThread]: Parsing macros/cross_db_utils/datediff.sql
+07:46:48.795131 [debug] [MainThread]: Parsing macros/cross_db_utils/date_trunc.sql
+07:46:48.796266 [debug] [MainThread]: Parsing macros/cross_db_utils/width_bucket.sql
+07:46:48.799812 [debug] [MainThread]: Parsing macros/cross_db_utils/safe_cast.sql
+07:46:48.801104 [debug] [MainThread]: Parsing macros/cross_db_utils/right.sql
+07:46:48.802646 [debug] [MainThread]: Parsing macros/cross_db_utils/replace.sql
+07:46:48.803529 [debug] [MainThread]: Parsing macros/cross_db_utils/position.sql
+07:46:48.804712 [debug] [MainThread]: Parsing macros/cross_db_utils/literal.sql
+07:46:48.805400 [debug] [MainThread]: Parsing macros/cross_db_utils/length.sql
+07:46:48.806307 [debug] [MainThread]: Parsing macros/cross_db_utils/last_day.sql
+07:46:48.808769 [debug] [MainThread]: Parsing macros/cross_db_utils/intersect.sql
+07:46:48.809520 [debug] [MainThread]: Parsing macros/cross_db_utils/identifier.sql
+07:46:48.810700 [debug] [MainThread]: Parsing macros/cross_db_utils/hash.sql
+07:46:48.811788 [debug] [MainThread]: Parsing macros/cross_db_utils/except.sql
+07:46:48.812556 [debug] [MainThread]: Parsing macros/cross_db_utils/escape_single_quotes.sql
+07:46:48.813837 [debug] [MainThread]: Parsing macros/cross_db_utils/dateadd.sql
+07:46:48.815845 [debug] [MainThread]: Parsing macros/cross_db_utils/datatypes.sql
+07:46:48.820161 [debug] [MainThread]: Parsing macros/cross_db_utils/current_timestamp.sql
+07:46:48.822679 [debug] [MainThread]: Parsing macros/cross_db_utils/concat.sql
+07:46:48.823403 [debug] [MainThread]: Parsing macros/cross_db_utils/cast_bool_to_text.sql
+07:46:48.824383 [debug] [MainThread]: Parsing macros/cross_db_utils/bool_or.sql
+07:46:48.825473 [debug] [MainThread]: Parsing macros/cross_db_utils/any_value.sql
+07:46:48.826359 [debug] [MainThread]: Parsing macros/cross_db_utils/_is_relation.sql
+07:46:48.827153 [debug] [MainThread]: Parsing macros/cross_db_utils/_is_ephemeral.sql
+07:46:49.102247 [debug] [MainThread]: 1603: static parser failed on generated/airbyte_ctes/dbtfix/ggr_ab1.sql
+07:46:49.126085 [debug] [MainThread]: 1602: parser fallback to jinja rendering on generated/airbyte_ctes/dbtfix/ggr_ab1.sql
+07:46:49.127325 [debug] [MainThread]: 1603: static parser failed on generated/airbyte_ctes/dbtfix/ggr_ab2.sql
+07:46:49.137507 [debug] [MainThread]: 1602: parser fallback to jinja rendering on generated/airbyte_ctes/dbtfix/ggr_ab2.sql
+07:46:49.138513 [debug] [MainThread]: 1603: static parser failed on generated/airbyte_ctes/dbtfix/ggr_ab3.sql
+07:46:49.152764 [debug] [MainThread]: 1602: parser fallback to jinja rendering on generated/airbyte_ctes/dbtfix/ggr_ab3.sql
+07:46:49.154157 [debug] [MainThread]: 1603: static parser failed on generated/airbyte_ctes/dbtfix/referentie_huisaansluiting_ab1.sql
+07:46:49.168153 [debug] [MainThread]: 1602: parser fallback to jinja rendering on generated/airbyte_ctes/dbtfix/referentie_huisaansluiting_ab1.sql
+07:46:49.169332 [debug] [MainThread]: 1603: static parser failed on generated/airbyte_ctes/dbtfix/referentie_huisaansluiting_ab2.sql
+07:46:49.178782 [debug] [MainThread]: 1602: parser fallback to jinja rendering on generated/airbyte_ctes/dbtfix/referentie_huisaansluiting_ab2.sql
+07:46:49.179778 [debug] [MainThread]: 1603: static parser failed on generated/airbyte_ctes/dbtfix/referentie_huisaansluiting_ab3.sql
+07:46:49.188119 [debug] [MainThread]: 1602: parser fallback to jinja rendering on generated/airbyte_ctes/dbtfix/referentie_huisaansluiting_ab3.sql
+07:46:49.189220 [debug] [MainThread]: 1603: static parser failed on generated/airbyte_tables/dbtfix/ggr.sql
+07:46:49.193507 [debug] [MainThread]: 1602: parser fallback to jinja rendering on generated/airbyte_tables/dbtfix/ggr.sql
+07:46:49.194604 [debug] [MainThread]: 1603: static parser failed on generated/airbyte_tables/dbtfix/referentie_huisaansluiting.sql
+07:46:49.198766 [debug] [MainThread]: 1602: parser fallback to jinja rendering on generated/airbyte_tables/dbtfix/referentie_huisaansluiting.sql
+07:46:49.240749 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 2 unused configuration paths:
+- models.airbyte_utils.generated.airbyte_incremental
+- models.airbyte_utils.generated.airbyte_views
+
+07:46:49.287679 [info ] [MainThread]: Found 8 models, 0 tests, 0 snapshots, 0 analyses, 525 macros, 0 operations, 0 seed files, 2 sources, 0 exposures, 0 metrics
+07:46:49.289011 [info ] [MainThread]: 
+07:46:49.289475 [debug] [MainThread]: Acquiring new postgres connection "master"
+07:46:49.290390 [debug] [ThreadPool]: Acquiring new postgres connection "list_cdc_testing_dbtfix"
+07:46:49.298230 [debug] [ThreadPool]: Using postgres connection "list_cdc_testing_dbtfix"
+07:46:49.298463 [debug] [ThreadPool]: On list_cdc_testing_dbtfix: BEGIN
+07:46:49.298552 [debug] [ThreadPool]: Opening a new connection, currently in state init
+07:46:49.414235 [debug] [ThreadPool]: SQL status: BEGIN in 0.12 seconds
+07:46:49.414702 [debug] [ThreadPool]: Using postgres connection "list_cdc_testing_dbtfix"
+07:46:49.414903 [debug] [ThreadPool]: On list_cdc_testing_dbtfix: /* {"app": "dbt", "dbt_version": "1.2.0a1", "profile_name": "normalize", "target_name": "prod", "connection_name": "list_cdc_testing_dbtfix"} */
+select
+      'cdc_testing' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'dbtfix'
+    union all
+    select
+      'cdc_testing' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'dbtfix'
+  
+07:46:49.452369 [debug] [ThreadPool]: SQL status: SELECT 18 in 0.04 seconds
+07:46:49.453866 [debug] [ThreadPool]: On list_cdc_testing_dbtfix: ROLLBACK
+07:46:49.463610 [debug] [ThreadPool]: On list_cdc_testing_dbtfix: Close
+07:46:49.472580 [debug] [MainThread]: Using postgres connection "master"
+07:46:49.472930 [debug] [MainThread]: On master: BEGIN
+07:46:49.473115 [debug] [MainThread]: Opening a new connection, currently in state init
+07:46:49.556684 [debug] [MainThread]: SQL status: BEGIN in 0.08 seconds
+07:46:49.557142 [debug] [MainThread]: Using postgres connection "master"
+07:46:49.557398 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.2.0a1", "profile_name": "normalize", "target_name": "prod", "connection_name": "master"} */
+with relation as (
+        select
+            pg_rewrite.ev_class as class,
+            pg_rewrite.oid as id
+        from pg_rewrite
+    ),
+    class as (
+        select
+            oid as id,
+            relname as name,
+            relnamespace as schema,
+            relkind as kind
+        from pg_class
+    ),
+    dependency as (
+        select distinct
+            pg_depend.objid as id,
+            pg_depend.refobjid as ref
+        from pg_depend
+    ),
+    schema as (
+        select
+            pg_namespace.oid as id,
+            pg_namespace.nspname as name
+        from pg_namespace
+        where nspname != 'information_schema' and nspname not like 'pg\_%'
+    ),
+    referenced as (
+        select
+            relation.id AS id,
+            referenced_class.name ,
+            referenced_class.schema ,
+            referenced_class.kind
+        from relation
+        join class as referenced_class on relation.class=referenced_class.id
+        where referenced_class.kind in ('r', 'v')
+    ),
+    relationships as (
+        select
+            referenced.name as referenced_name,
+            referenced.schema as referenced_schema_id,
+            dependent_class.name as dependent_name,
+            dependent_class.schema as dependent_schema_id,
+            referenced.kind as kind
+        from referenced
+        join dependency on referenced.id=dependency.id
+        join class as dependent_class on dependency.ref=dependent_class.id
+        where
+            (referenced.name != dependent_class.name or
+             referenced.schema != dependent_class.schema)
+    )
+
+    select
+        referenced_schema.name as referenced_schema,
+        relationships.referenced_name as referenced_name,
+        dependent_schema.name as dependent_schema,
+        relationships.dependent_name as dependent_name
+    from relationships
+    join schema as dependent_schema on relationships.dependent_schema_id=dependent_schema.id
+    join schema as referenced_schema on relationships.referenced_schema_id=referenced_schema.id
+    group by referenced_schema, referenced_name, dependent_schema, dependent_name
+    order by referenced_schema, referenced_name, dependent_schema, dependent_name;
+07:46:49.593090 [debug] [MainThread]: SQL status: SELECT 56 in 0.04 seconds
+07:46:49.597400 [debug] [MainThread]: On master: ROLLBACK
+07:46:49.608434 [debug] [MainThread]: On master: Close
+07:46:49.609476 [info ] [MainThread]: Concurrency: 8 threads (target='prod')
+07:46:49.610001 [info ] [MainThread]: 
+07:46:49.626034 [debug] [Thread-1 (]: Began running node model.airbyte_utils.ggr_ab1
+07:46:49.626499 [debug] [Thread-2 (]: Began running node model.airbyte_utils.referentie_huisaansluiting_ab1
+07:46:49.627337 [debug] [Thread-1 (]: Acquiring new postgres connection "model.airbyte_utils.ggr_ab1"
+07:46:49.627811 [debug] [Thread-2 (]: Acquiring new postgres connection "model.airbyte_utils.referentie_huisaansluiting_ab1"
+07:46:49.628057 [debug] [Thread-1 (]: Began compiling node model.airbyte_utils.ggr_ab1
+07:46:49.628237 [debug] [Thread-2 (]: Began compiling node model.airbyte_utils.referentie_huisaansluiting_ab1
+07:46:49.628475 [debug] [Thread-1 (]: Compiling model.airbyte_utils.ggr_ab1
+07:46:49.628623 [debug] [Thread-2 (]: Compiling model.airbyte_utils.referentie_huisaansluiting_ab1
+07:46:49.640923 [debug] [Thread-1 (]: Writing injected SQL for node "model.airbyte_utils.ggr_ab1"
+07:46:49.674089 [debug] [Thread-2 (]: Writing injected SQL for node "model.airbyte_utils.referentie_huisaansluiting_ab1"
+07:46:49.674808 [debug] [Thread-2 (]: finished collecting timing info
+07:46:49.674990 [debug] [Thread-1 (]: finished collecting timing info
+07:46:49.675596 [debug] [Thread-2 (]: Finished running node model.airbyte_utils.referentie_huisaansluiting_ab1
+07:46:49.675970 [debug] [Thread-1 (]: Finished running node model.airbyte_utils.ggr_ab1
+07:46:49.676522 [debug] [Thread-4 (]: Began running node model.airbyte_utils.referentie_huisaansluiting_ab2
+07:46:49.677489 [debug] [Thread-4 (]: Acquiring new postgres connection "model.airbyte_utils.referentie_huisaansluiting_ab2"
+07:46:49.677968 [debug] [Thread-6 (]: Began running node model.airbyte_utils.ggr_ab2
+07:46:49.678316 [debug] [Thread-4 (]: Began compiling node model.airbyte_utils.referentie_huisaansluiting_ab2
+07:46:49.679031 [debug] [Thread-6 (]: Acquiring new postgres connection "model.airbyte_utils.ggr_ab2"
+07:46:49.679506 [debug] [Thread-4 (]: Compiling model.airbyte_utils.referentie_huisaansluiting_ab2
+07:46:49.679885 [debug] [Thread-6 (]: Began compiling node model.airbyte_utils.ggr_ab2
+07:46:49.690810 [debug] [Thread-6 (]: Compiling model.airbyte_utils.ggr_ab2
+07:46:49.746154 [debug] [Thread-6 (]: Writing injected SQL for node "model.airbyte_utils.ggr_ab2"
+07:46:49.759306 [debug] [Thread-4 (]: Writing injected SQL for node "model.airbyte_utils.referentie_huisaansluiting_ab2"
+07:46:49.759980 [debug] [Thread-6 (]: finished collecting timing info
+07:46:49.760468 [debug] [Thread-4 (]: finished collecting timing info
+07:46:49.761070 [debug] [Thread-6 (]: Finished running node model.airbyte_utils.ggr_ab2
+07:46:49.761820 [debug] [Thread-4 (]: Finished running node model.airbyte_utils.referentie_huisaansluiting_ab2
+07:46:49.762887 [debug] [Thread-8 (]: Began running node model.airbyte_utils.ggr_ab3
+07:46:49.763111 [debug] [Thread-3 (]: Began running node model.airbyte_utils.referentie_huisaansluiting_ab3
+07:46:49.763495 [debug] [Thread-8 (]: Acquiring new postgres connection "model.airbyte_utils.ggr_ab3"
+07:46:49.763924 [debug] [Thread-3 (]: Acquiring new postgres connection "model.airbyte_utils.referentie_huisaansluiting_ab3"
+07:46:49.764125 [debug] [Thread-8 (]: Began compiling node model.airbyte_utils.ggr_ab3
+07:46:49.764278 [debug] [Thread-3 (]: Began compiling node model.airbyte_utils.referentie_huisaansluiting_ab3
+07:46:49.764459 [debug] [Thread-8 (]: Compiling model.airbyte_utils.ggr_ab3
+07:46:49.764663 [debug] [Thread-3 (]: Compiling model.airbyte_utils.referentie_huisaansluiting_ab3
+07:46:49.792624 [debug] [Thread-8 (]: Writing injected SQL for node "model.airbyte_utils.ggr_ab3"
+07:46:49.818979 [debug] [Thread-8 (]: finished collecting timing info
+07:46:49.835463 [debug] [Thread-8 (]: Finished running node model.airbyte_utils.ggr_ab3
+07:46:49.857131 [debug] [Thread-5 (]: Began running node model.airbyte_utils.ggr
+07:46:49.859715 [debug] [Thread-3 (]: Writing injected SQL for node "model.airbyte_utils.referentie_huisaansluiting_ab3"
+07:46:49.860632 [debug] [Thread-5 (]: Acquiring new postgres connection "model.airbyte_utils.ggr"
+07:46:49.861122 [debug] [Thread-5 (]: Began compiling node model.airbyte_utils.ggr
+07:46:49.861236 [debug] [Thread-5 (]: Compiling model.airbyte_utils.ggr
+07:46:49.868352 [debug] [Thread-5 (]: Writing injected SQL for node "model.airbyte_utils.ggr"
+07:46:49.868710 [debug] [Thread-3 (]: finished collecting timing info
+07:46:49.869416 [debug] [Thread-3 (]: Finished running node model.airbyte_utils.referentie_huisaansluiting_ab3
+07:46:49.870204 [debug] [Thread-7 (]: Began running node model.airbyte_utils.referentie_huisaansluiting
+07:46:49.870639 [debug] [Thread-5 (]: finished collecting timing info
+07:46:49.871259 [debug] [Thread-7 (]: Acquiring new postgres connection "model.airbyte_utils.referentie_huisaansluiting"
+07:46:49.871643 [debug] [Thread-5 (]: Began executing node model.airbyte_utils.ggr
+07:46:49.871970 [debug] [Thread-7 (]: Began compiling node model.airbyte_utils.referentie_huisaansluiting
+07:46:49.872337 [debug] [Thread-5 (]: finished collecting timing info
+07:46:49.872705 [debug] [Thread-7 (]: Compiling model.airbyte_utils.referentie_huisaansluiting
+07:46:49.873480 [debug] [Thread-5 (]: Finished running node model.airbyte_utils.ggr
+07:46:49.882207 [debug] [Thread-7 (]: Writing injected SQL for node "model.airbyte_utils.referentie_huisaansluiting"
+07:46:49.882940 [debug] [Thread-7 (]: finished collecting timing info
+07:46:49.883077 [debug] [Thread-7 (]: Began executing node model.airbyte_utils.referentie_huisaansluiting
+07:46:49.883185 [debug] [Thread-7 (]: finished collecting timing info
+07:46:49.883562 [debug] [Thread-7 (]: Finished running node model.airbyte_utils.referentie_huisaansluiting
+07:46:49.885427 [debug] [MainThread]: Connection 'master' was properly closed.
+07:46:49.885846 [debug] [MainThread]: Connection 'model.airbyte_utils.ggr_ab1' was properly closed.
+07:46:49.886105 [debug] [MainThread]: Connection 'model.airbyte_utils.referentie_huisaansluiting_ab1' was properly closed.
+07:46:49.886340 [debug] [MainThread]: Connection 'model.airbyte_utils.referentie_huisaansluiting_ab2' was properly closed.
+07:46:49.886593 [debug] [MainThread]: Connection 'model.airbyte_utils.ggr_ab2' was properly closed.
+07:46:49.886821 [debug] [MainThread]: Connection 'model.airbyte_utils.ggr_ab3' was properly closed.
+07:46:49.887046 [debug] [MainThread]: Connection 'model.airbyte_utils.referentie_huisaansluiting_ab3' was properly closed.
+07:46:49.887271 [debug] [MainThread]: Connection 'model.airbyte_utils.ggr' was properly closed.
+07:46:49.887515 [debug] [MainThread]: Connection 'model.airbyte_utils.referentie_huisaansluiting' was properly closed.
+07:46:49.906048 [info ] [MainThread]: Done.
+
+
+============================== 2022-05-20 07:49:44.200676 | 3d4d32c9-7ba1-4121-b43b-e5933b8a7321 ==============================
+07:49:44.200689 [info ] [MainThread]: Running with dbt=1.2.0-a1
+07:49:44.200996 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/home/jim/.dbt', 'send_anonymous_usage_stats': False, 'event_buffer_size': 100000, 'quiet': False, 'no_print': False, 'which': 'clean', 'indirect_selection': 'eager'}
+07:49:44.201098 [debug] [MainThread]: Tracking: do not track
+07:49:44.203168 [warn ] [MainThread]: [[33mWARNING[0m]: Deprecated functionality
+The default package install path has changed from `dbt_modules` to
+`dbt_packages`. Please update `clean-targets` in `dbt_project.yml` and check
+`.gitignore` as well. Or, set `packages-install-path: dbt_modules` if you'd like
+to keep the current value.
