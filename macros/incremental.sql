@@ -1,5 +1,5 @@
 {#
-    These macros control how incremental models are updated in Airbyte's normalization step
+    These macros control how incremental models are updated in Airbytes normalization step
     - get_max_normalized_cursor retrieve the value of the last normalized data
     - incremental_clause controls the predicate to filter on new data to process incrementally
 #}
